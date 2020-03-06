@@ -17,23 +17,23 @@
 // // sumMin([[11,2],[323,2,55]])   //2 + 2 = 4 
 // // sumMin([[13,11,2],[3,23,23,55],[23,55,3,77],[39,7,89,94]])   //2 + 3 + 3 + 7 = 15 
 
-// let array = [
-//     [8, 5, 7, 19, 21],
-//     [10, 12, 4, 825, 182],
-//     [125, 376, 93, 95, 930]
-// ]
+let array = [
+    [8, 5, 7, 19, 21],
+    [10, 12, 4, 825, 182],
+    [125, 376, 93, 95, 930]
+]
 
-// function minSumm(j){
-//     let minRow = 999999;
-//     for (let i = 0; i < 5; i++){
-//         if (array[j][i]  < minRow) {
-//             minRow = array[j][i]
-//         }
-//     }
-//     return minRow
-// }
+function minSumm(j){
+    let minRow = 999999;
+    for (let i = 0; i < 5; i++){
+        if (array[j][i]  < minRow) {
+            minRow = array[j][i]
+        }
+    }
+    return minRow
+}
 
-// alert(`${minSumm(0)} + ${minSumm(1)} + ${minSumm(2)} = ${minSumm(0) + minSumm(1) + minSumm(2)}`);
+alert(`${minSumm(0)} + ${minSumm(1)} + ${minSumm(2)} = ${minSumm(0) + minSumm(1) + minSumm(2)}`);
 
 
 // // Two Oldest Ages
@@ -50,16 +50,16 @@
 
 // // twoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]
 
-//  let ageArray = [28, 6, 17, 4, 19, 10, 83, 56, 14];
-//  function maxAge(arr){
-//     arr.sort(function(a, b) {   //Сортировка массива по убаванию
-//         return b - a;
-//       });
-//       arr.splice(2,7); //отрезает элементы массива. Начиная со 2 элемента удаляет 7.
-//       arr.reverse(); // Делает "обратный" массив
-//      return  arr;
-//  }
-//   alert(maxAge(ageArray));
+ let ageArray = [28, 6, 17, 4, 19, 10, 83, 56, 14];
+ function maxAge(arr){
+    arr.sort(function(a, b) {   //Сортировка массива по убаванию
+        return b - a;
+      });
+      arr.splice(2,7); //отрезает элементы массива. Начиная со 2 элемента удаляет 7.
+      arr.reverse(); // Делает "обратный" массив
+     return  arr;
+ }
+  alert(maxAge(ageArray));
 
 // //   Simple, given a string of words, return the length of the shortest word(s).
 
@@ -71,25 +71,25 @@
 // //   "i want to travel the world writing code one day" --> 1)
 // //   "Lets all go on holiday somewhere very cold" --> 2)
 
-// let phrase = 'Современный учебник JavaScript';
+let phrase = 'Современный учебник JavaScript';
 
-// let totalLenth = 999;
-// let checkPosition = 0;
-// let lenth = 0;
+let totalLenth = 999;
+let checkPosition = 0;
+let lenth = 0;
 
-// while(true){
-//     let checkPositionTemp = 0
-//     checkPositionTemp = phrase.indexOf(' ', checkPosition);
-//     if (checkPositionTemp == -1) {
-//         break;
-//     }
-//     if ((checkPositionTemp - checkPosition) < totalLenth) {
-//         totalLenth = checkPositionTemp - checkPosition
-//     }
-//     checkPosition = checkPositionTemp + 1;
+while(true){
+    let checkPositionTemp = 0
+    checkPositionTemp = phrase.indexOf(' ', checkPosition);
+    if (checkPositionTemp == -1) {
+        break;
+    }
+    if ((checkPositionTemp - checkPosition) < totalLenth) {
+        totalLenth = checkPositionTemp - checkPosition
+    }
+    checkPosition = checkPositionTemp + 1;
 
-// }
-// alert(totalLenth);
+}
+alert(totalLenth);
 
 // Your task is to sort a given string. Each word in the string will 
 // contain a single number. This number is the position the word 
